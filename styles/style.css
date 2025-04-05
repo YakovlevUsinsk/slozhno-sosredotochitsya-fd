@@ -1,5 +1,144 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: start;
+  max-inline-size: 1024px;
+  inline-size: 100%;
+  min-block-size: 100vh;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inset-block-end: 20px;
+  inset-inline-start: 20px;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border: 1px solid orange;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: #FF0070;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border: 1px solid orange;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #FF0070;
+}
+
+.header__theme-menu {
+  margin-block-start: 20px;
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 26px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-transform: lowercase;
+  line-height: 18px;
+  text-align: center;
+  color: #FF0070;
+
+  &&:focus-visible {
+    border-block-end: 1px solid #FF0070;
+  }
+
+  &&:focus {
+    outline: none;
+  }
+
+  &&:hover {
+    cursor: pointer;
+    border: 1px solid #FF0070;
+  }
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid #FF0070;
+}
+
+.header__decor-text {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 29px;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FF0070;
+}
+
+.header__decor-text::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  background: #FF0070;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px #FF0070;
+  margin-left: 10px;
+}
+
+.title {
+  width: 759px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0px #FF0070;
+}
+
+.sub-title {
+  inline-size: clamp(364px, calc((491/1024)*100%), 491px);
+  align-items: start;
+  margin-block-start: 114px;
+  margin-inline-end: 20px;
+  justify-self: end;
+  background: #FF0070;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000028;
+}
+
+@media (768px <=width <=1024px) {
+  .sub-title {
+    margin-block-start: calc(162px - (768px - 100vw)*(114 - 162)/(1024 - 768));
+  }
 }
