@@ -17,7 +17,6 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: start;
   max-inline-size: 1024px;
-  inline-size: 100%;
   min-block-size: 100vh;
 }
 
