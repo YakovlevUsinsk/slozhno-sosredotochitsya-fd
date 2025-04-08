@@ -1,16 +1,45 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --font-family-default: 'IBM Plex mono', Arial, Helvetica;
+  --font-style-default: normal;
+  --font-size-default: 18px;
+  --background-page-url: url(../images/cover-image-light.png);
+  --display-decor: none;
+  --color-decor-zone: #353430;
+  --color-header-menu-text: #353430;
+  --color-header-menu-border: #353430;
+  --color-title: #FFC2E6;
+  --color-shadow-title: #FF8DCB;
+  --background-color-sub-title: #FF8DCB;
+  --color-sub-title: #353430;
+  --color-text-block-title: #353430;
+  --color-title-paragraph: #353430;
+  --background-color-title-paragraph: #FF8DCB;
+  --color-text-paragraph: #353430;
+  --color-shadow-text-link: #FF8DCB;
+  --color-title-gallery: #353430;
+  --background-color-title-gallery: #FF8DCB;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --font-family-default: 'IBM Plex mono', Arial, Helvetica;
+    --font-style-default: normal;
+    --font-size-default: 18px;
+    --background-page-url: url(../images/cover-image-light.png);
+    --display-decor: none;
+    --color-decor-zone: #353430;
+    --color-header-menu-text: #353430;
+    --color-header-menu-border: #353430;
+    --color-title: #FFC2E6;
+    --color-shadow-title: #FF8DCB;
+    --background-color-sub-title: #FF8DCB;
+    --color-sub-title: #353430;
+    --color-text-block-title: #353430;
+    --color-title-paragraph: #353430;
+    --background-color-title-paragraph: #FF8DCB;
+    --color-text-paragraph: #353430;
+    --color-shadow-text-link: #FF8DCB;
+    --color-title-gallery: #353430;
+    --background-color-title-gallery: #FF8DCB;
+  }
+} */

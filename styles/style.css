@@ -1,10 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 18px;
-  background-image: url(../images/cover-image-dark.png);
+  font-family: var(--font-family-default, sans-serif);
+  font-style: var(--font-style-default, normal);
+  font-size: var(--font-size-default, 18px);
+  background-image: var(--background-page-url, url(../images/cover-image-dark.png));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -32,8 +32,8 @@
   inset-inline-start: 20px;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid #FF0070;
-  border-inline-start: 1px solid #FF0070;
+  border-block-end: 1px solid var(--color-decor-zone, #FF0070);
+  border-inline-start: 1px solid var(--color-decor-zone, #FF0070);
 }
 
 .decorated-zone::after {
@@ -43,8 +43,8 @@
   inset-inline-end: 20px;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid #FF0070;
-  border-inline-end: 1px solid #FF0070;
+  border-block-start: 1px solid var(--color-decor-zone, #FF0070);
+  border-inline-end: 1px solid var(--color-decor-zone, #FF0070);
 }
 
 .header__theme-menu {
@@ -67,10 +67,10 @@
   text-transform: lowercase;
   line-height: 18px;
   text-align: center;
-  color: #FF0070;
+  color: var(--color-header-menu-text, #FF0070);
 
   &&:focus-visible {
-    border-block-end: 1px solid #FF0070;
+    border-block-end: 1px solid var(--color-header-menu-border, #FF0070);
   }
 
   &&:focus {
@@ -79,22 +79,23 @@
 
   &&:hover {
     cursor: pointer;
-    border: 1px solid #FF0070;
+    border: 1px solid var(--color-header-menu-border, #FF0070);
   }
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #FF0070;
+  border: 1px solid var(--color-header-menu-border, #FF0070);
 }
 
 .header__decor-text {
+  display: var(--display-decor, inline);
   position: absolute;
   inset-block-start: 20px;
   inset-inline-end: 29px;
   line-height: 25px;
   text-transform: uppercase;
   text-align: center;
-  color: #FF0070;
+  color: var(--color-header-decor-text, #FF0070);
 }
 
 .header__decor-text::after {
@@ -102,9 +103,9 @@
   display: inline-block;
   inline-size: 9px;
   block-size: 9px;
-  background: #FF0070;
+  background-color: var(--background-color-header-decor-point, #FF0070);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px #FF0070;
+  box-shadow: 0px 0px 4px 2px var(--background-color-header-decor-point, #FF0070);
   margin-left: 10px;
 }
 
@@ -113,8 +114,8 @@
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0px #FF0070;
+  color: var(--color-title, #DB00FF);
+  text-shadow: 4px 4px 0px var(--color-shadow-title, #FF0070);
 }
 
 .sub-title {
@@ -123,12 +124,12 @@
   margin-block-start: 114px;
   margin-inline-end: 20px;
   justify-self: end;
-  background: #FF0070;
+  background-color: var(--background-color-sub-title, #FF0070);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: #000028;
+  color: var(--color-sub-title, #000028);
 }
 
 
@@ -159,7 +160,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: #FF0070;
+  color: var( --color-text-block-title, #FF0070);
 }
 
 
@@ -180,8 +181,8 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: #000028;
-  background-color: #FF0070;
+  color: var(--color-title-paragraph, #000028);
+  background-color: var( --background-color-title-paragraph, #FF0070);
 }
 
 .text-paragraph {
@@ -189,7 +190,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  color: #F1B2CE;
+  color: var(--color-text-paragraph, #F1B2CE);
 }
 
 .text-link {
@@ -198,11 +199,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  text-shadow: 2px 2px #FF0070;
+  text-shadow: 2px 2px var(--color-shadow-text-link, #FF0070);
   text-decoration: none;
 
   &&:hover {
-    border-block-end: 1px solid #FF0070;
+    border-block-end: 1px solid var(--color-shadow-text-link, #FF0070);
   }
 
   &&:focus {
@@ -210,7 +211,7 @@
   }
 
   &&:focus-visible {
-    outline: 1px solid #FF0070;
+    outline: 1px solid var(--color-shadow-text-link, #FF0070);
     outline-width: 1px;
   }
 
@@ -244,8 +245,8 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: #000028;
-  background-color: #FF0070;
+  color: var(--color-title-gallery, #000028);
+  background-color: var(--background-color-title-gallery, #FF0070);
 }
 
 .collection-picture {
