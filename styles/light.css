@@ -1,4 +1,5 @@
 :root.theme-light {
+  --background-color-page: #fff1f7;
   --font-family-default: 'IBM Plex mono', Arial, Helvetica;
   --font-style-default: normal;
   --font-size-default: 18px;
@@ -7,6 +8,7 @@
   --color-decor-zone: #353430;
   --color-header-menu-text: #353430;
   --color-header-menu-border: #353430;
+  --color-header-menu-border-selected: rgba(50, 49, 45, 0.4);
   --color-title: #FFC2E6;
   --color-shadow-title: #FF8DCB;
   --background-color-sub-title: #FF8DCB;
@@ -20,8 +22,9 @@
   --background-color-title-gallery: #FF8DCB;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
+    --background-color-page: #fff1f7;
     --font-family-default: 'IBM Plex mono', Arial, Helvetica;
     --font-style-default: normal;
     --font-size-default: 18px;
@@ -42,4 +45,4 @@
     --color-title-gallery: #353430;
     --background-color-title-gallery: #FF8DCB;
   }
-} */
+}

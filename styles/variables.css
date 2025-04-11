@@ -1,4 +1,5 @@
 :root {
+  --background-color-page: #000028;
   --font-family-default: 'IBM Plex mono', Arial, Helvetica;
   --font-style-default: normal;
   --font-size-default: 18px;
@@ -7,6 +8,7 @@
   --color-decor-zone: #FF0070;
   --color-header-menu-text: #FF0070;
   --color-header-menu-border: #FF0070;
+  --color-header-menu-border-selected: rgba(255, 0, 112, 0.4);
   --color-header-decor-text: #FF0070;
   --background-color-header-decor-point: #FF0070;
   --color-title: #DB00FF;
