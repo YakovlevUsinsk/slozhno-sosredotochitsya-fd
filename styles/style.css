@@ -186,7 +186,7 @@
   background-color: var( --background-color-title-paragraph, #FF0070);
 }
 
-.title-paragraph_fw400 {
+.block-text-item__header {
   font-weight: 400;
 }
 
@@ -375,6 +375,10 @@
   }
 
   .text-block-title {
+    grid-column: span 1;
+  }
+
+  .block-text {
     grid-column: span 1;
   }
 

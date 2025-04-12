@@ -1,8 +1,5 @@
 :root.theme-light {
   --background-color-page: #fff1f7;
-  --font-family-default: 'IBM Plex mono', Arial, Helvetica;
-  --font-style-default: normal;
-  --font-size-default: 18px;
   --background-page-url: url(../images/cover-image-light.png);
   --display-decor: none;
   --color-decor-zone: #353430;
@@ -25,14 +22,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     --background-color-page: #fff1f7;
-    --font-family-default: 'IBM Plex mono', Arial, Helvetica;
-    --font-style-default: normal;
-    --font-size-default: 18px;
     --background-page-url: url(../images/cover-image-light.png);
     --display-decor: none;
     --color-decor-zone: #353430;
     --color-header-menu-text: #353430;
     --color-header-menu-border: #353430;
+    --color-header-menu-border-selected: rgba(50, 49, 45, 0.4);
     --color-title: #FFC2E6;
     --color-shadow-title: #FF8DCB;
     --background-color-sub-title: #FF8DCB;
